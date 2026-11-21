@@ -1,7 +1,7 @@
 # Ads for Git Commit Prompt Pack
 
 Target: developers
-Link: https://USER.github.io/shotgun-git-commit-prompt-pack/
+Link: https://LinuxGuru999.github.io/shotgun-git-commit-prompt-pack/
 
 ## Reddit (post yourself; read each sub's self-promo rules first)
 **Title:** I made Git Commit Prompt Pack — 40 prompts that write clean, conventional commit messages
@@ -19,7 +19,7 @@ Show HN: Git Commit Prompt Pack – 40 prompts that write clean, conventional co
 ## X / Mastodon thread
 1/ Built Git Commit Prompt Pack: 40 prompts that write clean, conventional commit messages
 2/ 40 prompts that write clean, conventional commit messages Built for developers, with no account or subscription required.
-3/ $7, no signup: https://USER.github.io/shotgun-git-commit-prompt-pack/
+3/ $7, no signup: https://LinuxGuru999.github.io/shotgun-git-commit-prompt-pack/
 
 ## Notes
 - Post manually from your own account. Do not mass-post; it gets accounts banned.
