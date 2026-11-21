@@ -1,18 +1,18 @@
 {
-  "headline": "Never stare at a blank git commit line again.",
+  "headline": "Generate Clean, Conventional Git Commits in Seconds",
   "benefits": [
-    "Generate clean, conventional commit messages instantly with AI.",
-    "Handle breaking changes and complex scopes effortlessly.",
-    "Keep monorepo git histories organized and easy to read."
+    "Stop guessing syntax with 40 battle-tested AI prompts.",
+    "Instantly format breaking changes and scopes correctly.",
+    "Write pristine commit logs optimized for monorepos."
   ],
   "faq": [
     {
-      "q": "Will these prompts work with ChatGPT and Claude?",
-      "a": "Yes, the prompt pack is fully compatible with all major AI chat assistants."
+      "q": "Will this work with my AI tool of choice?",
+      "a": "Yes, the prompts work seamlessly with ChatGPT, Claude, and any major LLM."
     },
     {
       "q": "Do I need advanced Git knowledge to use this?",
-      "a": "No, the prompts do the heavy lifting to ensure your commit history follows industry standards automatically."
+      "a": "Not at all, the pack handles the complex conventional commit formatting for you automatically."
     }
   ]
 }
