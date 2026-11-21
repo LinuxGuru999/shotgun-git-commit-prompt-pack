@@ -1,0 +1,18 @@
+{
+  "headline": "Write clean, conventional commit messages instantly with AI.",
+  "benefits": [
+    "Generate standardized conventional commit messages in seconds.",
+    "Handle complex scopes and breaking changes effortlessly.",
+    "Perfect for monorepos and multi-package codebases."
+  ],
+  "faq": [
+    {
+      "q": "Will this work with my specific AI tool?",
+      "a": "Yes, the prompts work seamlessly with ChatGPT, Claude, and any LLM of your choice."
+    },
+    {
+      "q": "Do I need to rewrite my workflow?",
+      "a": "No, these prompts drop right into your existing development routine with zero friction."
+    }
+  ]
+}
