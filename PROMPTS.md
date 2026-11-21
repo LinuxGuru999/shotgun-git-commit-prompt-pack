@@ -3,28 +3,28 @@
 40 prompts that write clean, conventional commit messages
 ## Prompts
 
-1. Analyze the following staged git diff and generate a Conventional Commits v1.0.0 compliant message. Format it as `type(scope): short description`. Use one of: feat, fix, docs, style, refactor, test, chlore. Keep the subject line under 50 characters.
-2. Review this git diff and write a Conventional Commit message. Include a body that explains the 'why' behind the changes, not just the 'what'. Wrap body lines at 72 characters.
-3. Based on the provided git diff, generate a breaking change commit message. Ensure it follows the convention by appending an exclamation mark after the type/scope (e.g., `feat(api)!:`) and include a `BREAKING CHANGE: ` footer describing the migration path.
-4. Examine this set of uncommitted changes and suggest three different commit messages ranging from minimal (just the subject) to detailed (subject, body, and issue reference). Let me choose the best fit.
-5. Look at this git diff which fixes a bug. Write a conventional fix commit message and append a footer referencing the issue tracker in the format `Fixes #123`.
-6. Analyze the following documentation updates in the git diff and write a clear, concise `docs:` conventional commit. Summarize the user-facing impact in the body.
-7. Review this git diff containing only unit and integration tests. Write a `test:` conventional commit message that specifies which modules or components were covered.
-8. Based on this dependency upgrade diff, write a `chore(deps):` commit message that clearly states which packages were updated and whether they are major, minor, or patch bumps.
-9. Examine this code refactoring diff. Write a `refactor:` commit message that explicitly states what technical debt was addressed without changing external behavior.
-10. Read the following git diff for a performance optimization. Write a `perf:` conventional commit message that highlights the specific bottleneck resolved or metric improved.
-11. Generate a conventional commit message for this UI/UX styling change. Use the `style:` type and mention the specific components or design tokens affected.
-12. Analyze this messy git diff containing multiple distinct changes. Break them down and suggest how I should split them into separate atomic commits with appropriate conventional messages.
-13. Write a `ci:` conventional commit message based on this diff involving GitHub Actions or CI/CD pipeline configurations.
-14. Review this git diff for a new feature implementation. Write a conventional commit message and generate a corresponding release note bullet point for the changelog.
-15. Inspect this git diff which reverts a previous commit. Write a conventional commit message starting with `revert: ` and include the hash and reason for the revert in the body.
-16. Analyze this security patch diff. Write a conventional commit message using `fix:` or `security:` and provide a detailed, jargon-free explanation of the vulnerability addressed in the body.
-17. Based on this localization or i18n git diff, write a conventional commit message detailing the languages, locales, or translation keys added or modified.
-18. Look at this database migration diff. Write a conventional commit message that clearly indicates schema changes, specifying whether tables or columns were added, dropped, or altered.
-19. Review this configuration file update diff (e.g., tsconfig, eslint, webpack). Write a conventional commit message using the `chore:` type with a descriptive scope.
-20. Analyze this git diff and write a localized conventional commit message in [Language]. Ensure standard commit terminology remains accurate.
-21. Examine this experimental or Work-In-Progress (WIP) diff. Write a temporary conventional commit message that flags the code as incomplete, using `wip:` or a clearly marked `refactor(wip):` format.
-22. Review this git diff involving asset additions (images, fonts, icons). Write a conventional commit message using `chore:` or `assets:` with a clear description of the new resources.
-23. Based on this monorepo git diff, write a conventional commit message that uses the workspace package name as the scope (e.g., `feat(auth-service): add jwt validation`).
-24. Inspect this git diff where dead code was removed. Write a conventional commit message using `refactor:` or `chore:` that specifies which obsolete files, functions, or variables were purged.
-25. Analyze this final release commit diff. Write a conventional commit message for a version bump (e.g., `chore(release): v1.2.0`) and list the primary feature additions included in the release body.
+1. Analyze the following staged git diff and generate a Conventional Commits compliant message using the format `<type>(<scope>): <short description>`. Choose the correct type from: feat, fix, docs, style, refactor, test, or chore. Keep the description under 50 characters, lowercase, and free of punctuation at the end.
+2. Review the following git diff for a bug fix. Write a conventional commit message that includes a breaking change warning in the footer if public APIs were modified, and reference the issue number [ISSUE_ID] if applicable.
+3. Examine this set of changes which includes multiple distinct updates (e.g., a bug fix and a documentation update). Break them down and write a primary conventional commit message along with secondary commit suggestions for each distinct logical change.
+4. Look at this git diff representing a new feature implementation. Write a conventional commit message with the type `feat`, followed by a descriptive scope in parentheses, and add a detailed body that explains the motivation behind the feature and architectural choices made.
+5. Analyze this git diff which contains refactoring work. Write a conventional commit message using type `refactor` that explicitly states what code smells were removed or how readability was improved without altering external behavior.
+6. Review these code changes and write a conventional commit message using the type `perf`. The description must clearly state the performance bottleneck that was addressed and any measurable improvements if evident from the code.
+7. Inspect this git diff for a test suite update. Write a conventional commit message using the type `test`, detailing whether new unit tests, integration tests, or end-to-end tests were added or modified.
+8. Analyze this git diff involving dependency upgrades or configuration file changes. Write a conventional commit message using the type `chore`, clearly listing the packages updated or configuration tools modified.
+9. Examine this git diff and write a conventional commit message using the type `style`. Ensure the description specifies formatting, linting, or whitespace changes that do not affect code logic.
+10. Review this documentation-only git diff (Markdown files, README, comments). Write a conventional commit message using the type `docs` that explains what guides, API references, or explanations were added or corrected.
+11. Read this git diff and write a conventional commit message that strictly adheres to a maximum length of 50 characters for the subject line, followed by a blank line, and a wrapped body with lines no longer than 72 characters explaining the "why" instead of the "what".
+12. Analyze this complex git diff that introduces a breaking API change. Write a conventional commit message featuring an exclamation mark before the colon (e.g., `feat!: change user payload structure`) and include a `BREAKING CHANGE:` footer detailing migration steps.
+13. Inspect this git diff and generate a conventional commit message in Spanish, keeping the standard format (`tipo(alcance): descripción`) while ensuring technical terms remain accurate to industry standards.
+14. Inspect this git diff and generate a conventional commit message in German, keeping the standard format (`typ(bereich): beschreibung`) while ensuring technical terms remain accurate to industry standards.
+15. Analyze this WIP (Work In Progress) git diff. Write a provisional conventional commit message using the type `wip` or `chore` that clearly labels the current state of unfinished experiments for local branching purposes.
+16. Review this hotfix git diff intended for an immediate production patch. Write a conventional commit message using type `fix` with an appended Jira or linear ticket reference in the footer, optimized for automated changelog generators.
+17. Examine this git diff where database migrations or schema alterations were performed. Write a conventional commit message using type `feat` or `chore` with the scope `db`, detailing the exact schema or table modifications.
+18. Look at this git diff involving CI/CD pipeline modifications (GitHub Actions, GitLab CI, Dockerfiles). Write a conventional commit message using type `ci` or `build` with an appropriate scope describing the workflow or container adjustment.
+19. Analyze this git diff and provide three alternative conventional commit message options ranging from minimal (just the subject line) to comprehensive (subject, body, and footers), allowing me to choose the best fit for our team's strictness level.
+20. Review this git diff containing security patches or dependency vulnerability fixes. Write a conventional commit message using type `fix` with scope `sec` and a body detailing the CVE or security vector mitigated.
+21. Inspect this git diff which removes deprecated code or legacy features. Write a conventional commit message using type `refactor` or `feat` with a clear statement on what was sunsetted and alternatives available.
+22. Examine this git diff for a multi-package monorepo (e.g., Turborepo, Lerna). Write a conventional commit message where the scope accurately reflects the specific package or workspace affected (e.g., `fix(auth-pkg): resolve token expiration bug`).
+23. Analyze this git diff representing a revert of a previous commit. Write a conventional commit message using the standard `revert: ` prefix followed by the original commit's header and a brief explanation of why the revert was necessary.
+24. Review this git diff where localization or internationalization (i18n) strings were added or updated. Write a conventional commit message using type `chore` or `feat` with scope `i18n` and mention the target locales affected.
+25. Read this git diff and write a conventional commit message that omits the scope entirely because the changes span multiple core systems, focusing strictly on a precise, imperative action verb in the subject line.
